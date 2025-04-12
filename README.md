@@ -40,6 +40,7 @@ foundryup
 
 **Done!**
 
+## Forge
 
 ### 1. Initialize Foundry project
 
@@ -85,11 +86,15 @@ $ forge test
 $ anvil
 ```
 
-### 8. Deploy
+### 8. Finally, let's run our deployment script:
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```sh
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>forge script script/Counter.s.sol
 ```
+
+
+
+
 
 
 
