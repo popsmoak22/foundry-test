@@ -1,8 +1,8 @@
-# 🧮 Counter Contract – Foundry Demo
+# Counter Contract – Foundry Demo
 
 This is a simple smart contract project that demonstrates how to build, test, and deploy a basic `Counter` using [Foundry](https://book.getfoundry.sh/).
 
-## 📦 Prerequisites
+## Prerequisites
 
 - [Foundry](https://book.getfoundry.sh/getting-started/installation) installed
 - [Git](https://git-scm.com/)
@@ -15,7 +15,7 @@ This is a simple smart contract project that demonstrates how to build, test, an
 
 ```bash
 # 1. Initialize Foundry project
-forge init counter-foundry
+$ forge init counter-foundry
 
 # 2. Move into the project folder
 cd counter-foundry
