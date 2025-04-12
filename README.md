@@ -13,15 +13,26 @@ This is a simple smart contract project that demonstrates how to build, test, an
 
 ## 🛠️ Project Setup
 
-```bash
 # 1. Initialize Foundry project
-$ forge init counter-foundry
+
+```bash
+$ forge init foundry-test
+```
 
 # 2. Move into the project folder
+
+```bash
 cd counter-foundry
+```
 
 # 3. Install forge-std for scripting and testing
+
+```bash
 forge install foundry-rs/forge-std
+```
 
 # 4. Auto-generate remappings
+
+````bash
 forge remappings > remappings.txt
+````
