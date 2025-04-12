@@ -20,6 +20,27 @@ Foundry consists of:
 
 ## 🛠️ Project Setup
 
+### Installation
+
+Getting started is simple and straight-forward:
+
+Install `foundryup`:
+
+```
+curl -L https://foundry.paradigm.xyz | bash
+```
+
+Next, run `foundryup`.
+
+It will automatically install the latest version of the precompiled binaries: [`forge`](#forge), [`cast`](#cast), [`anvil`](#anvil), and [`chisel`](#chisel).
+
+```
+foundryup
+```
+
+**Done!**
+
+
 ### 1. Initialize Foundry project
 
 ```bash
@@ -29,7 +50,7 @@ forge init foundry-test
 ### 2. Move into the project folder
 
 ```bash
-cd counter-foundry
+cd foundry-test
 ```
 
 ### 3. Install forge-std for scripting and testing
