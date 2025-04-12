@@ -13,10 +13,10 @@ This is a simple smart contract project that demonstrates how to build, test, an
 
 ## 🛠️ Project Setup
 
-# 1. Initialize Foundry project
+### 1. Initialize Foundry project
 
 ```bash
-$ forge init foundry-test
+forge init foundry-test
 ```
 
 # 2. Move into the project folder
