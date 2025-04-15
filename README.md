@@ -70,19 +70,36 @@ forge remappings > remappings.txt
 
 ### 5. Build
 
-```shell
+```bash
 $ forge build
 ```
 
+````console
+[⠒] Compiling...
+No files changed, compilation skipped
+````
+
 ### 6. Test
 
-```shell
+```bash
 $ forge test
 ```
 
+````console
+[⠊] Compiling...
+No files changed, compilation skipped
+
+Ran 2 tests for test/Counter.t.sol:CounterTest
+[PASS] testFuzz_SetNumber(uint256) (runs: 256, μ: 32120, ~: 32354)
+[PASS] test_Increment() (gas: 31851)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 27.08ms (19.18ms CPU time)
+
+Ran 1 test suite in 344.97ms (27.08ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+````
+
 ### 7. Anvil
 
-```shell
+```bash
 $ anvil
 ```
 
