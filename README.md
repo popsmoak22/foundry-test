@@ -102,7 +102,7 @@ Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 27.08ms (19.18ms CP
 Ran 1 test suite in 344.97ms (27.08ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
 ````
 
-### 7. Anvil
+## Anvil
 
 ```bash
 $ anvil
