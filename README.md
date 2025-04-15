@@ -5,7 +5,7 @@ This is a simple smart contract project that demonstrates how to build, test, an
 Foundry consists of:
 
 -   **Forge**: Think of Forge as the power toolset for Ethereum developers—like Hardhat, Truffle, or DappTools—used for building, testing, and managing smart contracts with speed and precision.
--   **Cast**: * Imagine Cast as the Swiss army knife for Ethereum—it lets you poke, prod, and interact with smart contracts and the blockchain directly from your terminal, whether you're querying data or sending transactions.
+-   **Cast**: Imagine Cast as the Swiss army knife for Ethereum—it lets you poke, prod, and interact with smart contracts and the blockchain directly from your terminal, whether you're querying data or sending transactions.
 -   **Anvil**: Anvil is your personal blockchain sandbox—a blazing-fast local Ethereum node, similar to Ganache or Hardhat Network, perfect for simulating real-world interactions during development and testing.
 -   **Chisel**: Chisel is like a Solidity playground in your terminal—a rapid, interactive REPL (Read-Eval-Print Loop) where you can experiment with Solidity snippets and get instant feedback.
 
