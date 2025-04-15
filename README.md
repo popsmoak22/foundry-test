@@ -1,66 +1,138 @@
-## Foundry
+# Counter Contract – Foundry Demo
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This is a simple smart contract project that demonstrates how to build, test, and deploy a basic `Counter` using [Foundry](https://book.getfoundry.sh/).
 
 Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+-   **Forge**: Think of Forge as the power toolset for Ethereum developers—like Hardhat, Truffle, or DappTools—used for building, testing, and managing smart contracts with speed and precision.
+-   **Cast**: Imagine Cast as the Swiss army knife for Ethereum—it lets you poke, prod, and interact with smart contracts and the blockchain directly from your terminal, whether you're querying data or sending transactions.
+-   **Anvil**: Anvil is your personal blockchain sandbox—a blazing-fast local Ethereum node, similar to Ganache or Hardhat Network, perfect for simulating real-world interactions during development and testing.
+-   **Chisel**: Chisel is like a Solidity playground in your terminal—a rapid, interactive REPL (Read-Eval-Print Loop) where you can experiment with Solidity snippets and get instant feedback.
 
-## Documentation
+## Prerequisites
 
-https://book.getfoundry.sh/
+- [Foundry](https://book.getfoundry.sh/getting-started/installation) installed
+- [Git](https://git-scm.com/)
+- [MetaMask](https://metamask.io/) with testnet (e.g. Sepolia) setup
+- Sepolia ETH (via [faucet](https://sepoliafaucet.com/))
+
+---
+
+## 🛠️ Project Setup
+
+### Installation
+
+Getting started is simple and straight-forward:
+
+Install `foundryup`:
+
+```
+curl -L https://foundry.paradigm.xyz | bash
+```
+
+Next, run `foundryup`.
+
+It will automatically install the latest version of the precompiled binaries: [`forge`](#forge) and [`anvil`](#anvil)
+
+```
+foundryup
+```
+
+**Done!**
+
+## File Loactions
+- **src**: This folder contains the main contract code
+- **test**: contains the test code for your contract
+- **script**: contains the code to deploy your contract on a testnet or local node
+
+## Forge
+
+### 1. Initialize Foundry project
+
+```bash
+forge init foundry-test
+```
+
+### 2. Move into the project folder
+
+```bash
+cd foundry-test
+```
+
+### 3. Install forge-std for scripting and testing
+
+```bash
+forge install foundry-rs/forge-std
+```
+
+### 4. Auto-generate remappings
+
+````bash
+forge remappings > remappings.txt
+````
 
 ## Usage
 
-### Build
+### 5. Build
 
-```shell
+```bash
 $ forge build
 ```
 
-### Test
+````console
+[⠒] Compiling...
+No files changed, compilation skipped
+````
 
-```shell
+### 6. Test
+
+```bash
 $ forge test
 ```
 
-### Format
+````console
+[⠊] Compiling...
+No files changed, compilation skipped
 
-```shell
-$ forge fmt
-```
+Ran 2 tests for test/Counter.t.sol:CounterTest
+[PASS] testFuzz_SetNumber(uint256) (runs: 256, μ: 32120, ~: 32354)
+[PASS] test_Increment() (gas: 31851)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 27.08ms (19.18ms CPU time)
 
-### Gas Snapshots
+Ran 1 test suite in 344.97ms (27.08ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+````
 
-```shell
-$ forge snapshot
-```
+## Anvil
 
-### Anvil
-
-```shell
+You need to start an RPC-compatible node like Anvil or hardhat e.t.c. before deploying to a node
+```bash
 $ anvil
 ```
 
-### Deploy
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+### 7. Finally, let's run our deployment script:
+
+```sh
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>forge script script/Counter.s.sol
 ```
 
-### Cast
+### (Optional) Use a Public RPC Instead (e.g., mainnet/testnet)
 
-```shell
-$ cast <subcommand>
-```
+If you’re not trying to test against a local node but against a real network, you can use a public fork like:
 
-### Help
+````sh
+--fork-url https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY
+````
+or for a testnet:
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+````sh
+--fork-url https://sepolia.infura.io/v3/YOUR_KEY
+````
+> [!IMPORTANT]  
+> Just make sure your private key has ETH on that chain (or use one of the private keys in your local Anvil chain)
+
+
+
+
+
+
