@@ -110,7 +110,7 @@ $ anvil
 ```
 
 
-### 8. Finally, let's run our deployment script:
+### 7. Finally, let's run our deployment script:
 
 ```sh
 $ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>forge script script/Counter.s.sol
