@@ -32,13 +32,18 @@ curl -L https://foundry.paradigm.xyz | bash
 
 Next, run `foundryup`.
 
-It will automatically install the latest version of the precompiled binaries: [`forge`](#forge), [`cast`](#cast), [`anvil`](#anvil), and [`chisel`](#chisel).
+It will automatically install the latest version of the precompiled binaries: [`forge`](#forge) and [`anvil`](#anvil)
 
 ```
 foundryup
 ```
 
 **Done!**
+
+## File Loactions
+- **src**: This folder contains the main contract code
+- **test**: contains the test code for your contract
+- **script**: contains the code to deploy your contract on a testnet or local node
 
 ## Forge
 
