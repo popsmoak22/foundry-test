@@ -104,9 +104,11 @@ Ran 1 test suite in 344.97ms (27.08ms CPU time): 2 tests passed, 0 failed, 0 ski
 
 ## Anvil
 
+You need to start an RPC-compatible node like Anvil or hardhat e.t.c. before deploying to a node
 ```bash
 $ anvil
 ```
+
 
 ### 8. Finally, let's run our deployment script:
 
@@ -114,6 +116,20 @@ $ anvil
 $ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>forge script script/Counter.s.sol
 ```
 
+### (Optional) Use a Public RPC Instead (e.g., mainnet/testnet)
+
+If you’re not trying to test against a local node but against a real network, you can use a public fork like:
+
+````sh
+--fork-url https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY
+````
+or for a testnet:
+
+````sh
+--fork-url https://sepolia.infura.io/v3/YOUR_KEY
+````
+> [!IMPORTANT]  
+> Just make sure your private key has ETH on that chain (or use one of the private keys in your local Anvil chain)
 
 
 
